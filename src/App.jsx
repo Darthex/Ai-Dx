@@ -41,6 +41,7 @@ export default function App() {
             }])
             setIsLoading(prevState => !prevState)
         }).catch((error) => {
+            console.log(error)
             setIsError(true)
             setIsLoading(prevState => !prevState)
         })
@@ -63,6 +64,7 @@ export default function App() {
                 setImageUrl(response.data.data[0].url)
                 setIsImageLoading(prevState => !prevState)
             }).catch((err) => {
+                console.log(err)
                 setIsImageError(true)
                 setIsImageLoading(prevState => !prevState)
             })
