@@ -49,7 +49,6 @@ export default function App() {
     React.useEffect(() => {
         if (initialRender.current) {
             //this will not run the axios request hence not causing unnecessary empty requests
-            console.log('first render')
             initialRender.current = false
         } else {
             setIsImageLoading(prevState => !prevState)
